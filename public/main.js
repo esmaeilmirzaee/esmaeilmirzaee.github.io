@@ -46,9 +46,12 @@ const getPosts = () => {
         const content = parseContent({ lines, metaDataIndices });
         post = {
           id: index + 1,
-          title: metaData.title ? metaData.title : 'Without title',
-          author: metaData.author ? metaData.author : 'Unknown',
-          date: metaData.date ? metaData.date : 'Today--unspecified',
+          title: metaData.title ? metaData.title : null,
+          author: metaData.author ? metaData.author : null,
+          date: metaData.date ? metaData.date : null,
+          readtime: metaData.readtime ? metaData.readtime : null,
+          image: metaData.image ? metaData.image : null,
+          point: metaData.point ? metaData.point : null,
           content: content ? content : 'Empty',
         };
         postLists.push(post);

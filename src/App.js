@@ -55,16 +55,23 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Paper>
+      <Paper style={{ height: '100vh' }}>
         <Appbar />
         <div className='container'>
           <Switch>
             <Route path='/posts' component={Posts} />
             <Route path='/about' render={(props) => <About {...props} />} />
-            <Route from='/' component={LandingPage} />} />
+            <Route from='/' component={LandingPage} />
           </Switch>
         </div>
-        <Foobar background='main' />
+        <Foobar
+          style={{
+            display: 'flex',
+            position: 'relative',
+            bottom: '0',
+            left: '0',
+          }}
+        />
       </Paper>
     </ThemeProvider>
   );
