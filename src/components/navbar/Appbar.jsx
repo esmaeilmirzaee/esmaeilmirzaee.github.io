@@ -12,8 +12,9 @@ import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import Brightness4Icon from '@material-ui/icons/Brightness4';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 import logo from '../../assets/img/logo.svg';
+import { FaBlog } from 'react-icons/fa';
 
 const useStyles = makeStyles((theme) => ({
   grow: {
@@ -184,8 +185,8 @@ function Appbar() {
               </Badge>
             </IconButton>
             <IconButton aria-label='show 17 new notifications' color='inherit'>
-              <Badge badgeContent={17} color='secondary'>
-                <NotificationsIcon />
+              <Badge badgeContent={17} color='secondary' to='/posts'>
+                <FaBlog />
               </Badge>
             </IconButton>
             <IconButton

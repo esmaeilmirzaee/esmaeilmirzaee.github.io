@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import Appbar from './components/navbar/Appbar';
+import Appbar from './components/navbar/AppBarV2';
 import Foobar from './components/navbar/Foobar';
 import {
   createMuiTheme,
@@ -10,13 +10,8 @@ import {
 import { Paper } from '@material-ui/core/';
 import Home from './components/pages/Home';
 import About from './components/pages/About';
-
-import Hero from './components/home_page_sections/Hero';
-import Objective from './components/home_page_sections/ObjectiveHero';
-import Cards from './components/experience_cards/Cards';
-import Projects from './components/recent_projects/Projects';
-import MidMainImage from './components/MidMainImage';
-import Contact from './components/contacts/Contact';
+import LandingPage from './components/landing_page/LandingPage';
+import Posts from './components/blogs_post/Posts';
 
 function App() {
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
@@ -64,15 +59,10 @@ function App() {
         <Appbar />
         <div className='container'>
           <Switch>
+            <Route path='/posts' component={Posts} />
             <Route path='/about' render={(props) => <About {...props} />} />
-            <Route from='/' render={(props) => <Home {...props} />} />
+            <Route from='/' component={LandingPage} />} />
           </Switch>
-          <Hero />
-          <Objective />
-          <Cards />
-          {/* <MidMainImage style={{ width: '100vw', maxHeight: '400px' }} /> */}
-          {/* <Projects style={{ visibility: 'hidden' }} /> */}
-          <Contact />
         </div>
         <Foobar background='main' />
       </Paper>
