@@ -61,7 +61,7 @@ const Posts = () => {
                   variant='h6'
                   className={classes.title}
                   component={Link}
-                  to={`/post/:${post.id}`}
+                  to={`/posts/${post.id}`}
                 >
                   {post.title}
                 </Typography>

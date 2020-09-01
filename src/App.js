@@ -12,6 +12,8 @@ import Home from './components/pages/Home';
 import About from './components/pages/About';
 import LandingPage from './components/landing_page/LandingPage';
 import Posts from './components/blogs_post/Posts';
+import Post from './components/blogs_post/Post';
+import nf from './components/utilities/NotFound';
 
 function App() {
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
@@ -55,10 +57,12 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Paper style={{ height: '100vh' }}>
+      <Paper>
         <Appbar />
         <div className='container'>
           <Switch>
+            <Route path='/404' component={nf} />
+            <Route path='/posts/:id' render={(props) => <Post {...props} />} />
             <Route path='/posts' component={Posts} />
             <Route path='/about' render={(props) => <About {...props} />} />
             <Route from='/' component={LandingPage} />

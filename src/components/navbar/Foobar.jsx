@@ -4,7 +4,6 @@ import Container from '@material-ui/core/Container';
 import { Typography } from '@material-ui/core';
 import SocialNetwork from '../SocialNetwork';
 import { FaQuoteLeft, FaQuoteRight } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
 
 function Foobar() {
   let year = new Date().getFullYear();
