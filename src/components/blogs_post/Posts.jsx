@@ -45,18 +45,12 @@ const Posts = () => {
   const classes = useStyle();
   return (
     <Container className={classes.container}>
-      <Grid container direction='column' sm={12} spacing={2}>
+      <Grid container direction='column' spacing={2}>
         <Typography>All recent posts</Typography>
         {allRecentPosts.length &&
           allRecentPosts.map((post, index) => {
             return (
-              <Grid
-                item
-                className={classes.post}
-                key={index}
-                sm={12}
-                spacing={3}
-              >
+              <Grid item className={classes.post} key={index} sm={12}>
                 <Typography
                   variant='h6'
                   className={classes.title}

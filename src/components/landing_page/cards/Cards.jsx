@@ -35,6 +35,7 @@ import {
 function Cards() {
   const cards = [
     {
+      id: 1,
       title: 'Developer',
       icon: <CodeOutlinedIcon className='head__icon' />,
       subtitle:
@@ -58,6 +59,7 @@ function Cards() {
       ],
     },
     {
+      id: 2,
       title: 'Designer',
       icon: <RiPencilRuler2Line className='head__icon' />,
       subtitle: 'I value simple design, thoughtful and meaningful structure.',
@@ -78,6 +80,7 @@ function Cards() {
       ],
     },
     {
+      id: 3,
       title: 'DevOps',
       icon: <CloudDoneOutlinedIcon className='head__icon' />,
       subtitle:
@@ -113,7 +116,6 @@ function Cards() {
     <Container className='cards' style={{ display: 'flex' }}>
       {cards.map((card, index) => (
         <Card
-          key={index}
           title={card.title}
           icon={card.icon}
           subtitle={card.subtitle}

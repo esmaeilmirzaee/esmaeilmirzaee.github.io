@@ -6,6 +6,8 @@ import Markdown from 'react-markdown';
 import { makeStyles } from '@material-ui/styles';
 import { FollowButton } from '../styled_components/button';
 
+import Opinion from '../further/opinion';
+
 const useStyle = makeStyles((theme) => ({
   articleSection: {
     display: 'block-flex',
@@ -95,6 +97,7 @@ export default function Post(props) {
       <article>
         <Markdown source={fetchedPost.content} escapeHtml={false} />
       </article>
+      <Opinion />
     </Container>
   );
 }

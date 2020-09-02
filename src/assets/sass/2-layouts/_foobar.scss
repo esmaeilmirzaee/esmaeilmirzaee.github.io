@@ -4,6 +4,7 @@
   .footer {
     // e0e0e0
     background: #fff9f2;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,6 +33,7 @@
 
 @media screen and (min-width: 960px) {
   .footer {
+    color: black;
     width: 100%;
     background: #fff9f2;
     display: flex;

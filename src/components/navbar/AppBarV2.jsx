@@ -40,7 +40,7 @@ export default function AppBarV2() {
     <React.Fragment>
       <ElevationScroll>
         <AppBar position='fixed'>
-          <Toolbar className={classes.appbar} disableGutters>
+          <Toolbar className={classes.appbar}>
             <Button
               className={classes.logoContainer}
               component={Link}
@@ -54,7 +54,8 @@ export default function AppBarV2() {
             </Button>
 
             {/* FIXME: The name is inappropriate */}
-            {viewPortSize ? <Drawer /> : <MenuNavbar />}
+            <MenuNavbar />
+            {/* {viewPortSize ? <Drawer /> : <MenuNavbar />} */}
           </Toolbar>
         </AppBar>
       </ElevationScroll>
