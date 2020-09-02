@@ -7,7 +7,6 @@ export const FollowButton = styled.button`
   margin: 0.5rem 1rem;
   width: 7rem
   height: 1rem;
-  background: #fff;
+  background: #fff9f2;
   color: black;
-  border: 1px solid black;
 `;

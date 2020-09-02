@@ -16,9 +16,7 @@ const useStyle = makeStyles((theme) => ({
     cursor: 'pointer',
     '&:hover': {
       backgroundColor: '#f6f5f5',
-      textDecoration: 'uppercase',
       fontWeight: '800',
-      bordr: 'none',
       boxShadow: '0px 0px 2px rgba(0,0,0,1)',
     },
   },
@@ -33,6 +31,13 @@ const useStyle = makeStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
     margin: theme.spacing(2),
+  },
+  author: {
+    cursor: 'pointer',
+    '&:hover': {
+      fontWeight: '500',
+      textDecoration: 'underline',
+    },
   },
   contentSection: {},
 }));
@@ -69,7 +74,9 @@ export default function Post(props) {
         <div className={classes.infoText}>
           <div className={classes.authorSection}>
             <div>
-              <Typography variant='caption'>{fetchedPost.author}</Typography>
+              <Typography className={classes.author} variant='caption'>
+                {fetchedPost.author}
+              </Typography>
             </div>
             <div>
               <FollowButton
