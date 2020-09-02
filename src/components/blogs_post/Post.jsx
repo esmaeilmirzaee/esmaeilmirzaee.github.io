@@ -4,12 +4,23 @@ import posts from '../../content/generated/posts.json';
 import { Redirect } from 'react-router-dom';
 import Markdown from 'react-markdown';
 import { makeStyles } from '@material-ui/styles';
+import { FollowButton } from '../styled_components/button';
 
 const useStyle = makeStyles((theme) => ({
   articleSection: {
     display: 'block-flex',
     textAlign: 'left',
     width: '70%',
+  },
+  followButton: {
+    cursor: 'pointer',
+    '&:hover': {
+      backgroundColor: '#f6f5f5',
+      textDecoration: 'uppercase',
+      fontWeight: '800',
+      bordr: 'none',
+      boxShadow: '0px 0px 2px rgba(0,0,0,1)',
+    },
   },
   infoSection: {
     margin: '1em',
@@ -61,9 +72,12 @@ export default function Post(props) {
               <Typography variant='caption'>{fetchedPost.author}</Typography>
             </div>
             <div>
-              <Button variant='outlinedPrimary' size='small'>
+              <FollowButton
+                className={classes.followButton}
+                variant='outlinedPrimary'
+              >
                 Follow
-              </Button>
+              </FollowButton>
             </div>
           </div>
           <Typography className={classes.authorSection} variant='caption'>
