@@ -7,7 +7,8 @@ import CodeOutlinedIcon from '@material-ui/icons/CodeOutlined';
 import { FiFigma } from 'react-icons/fi';
 import { MdApps } from 'react-icons/md';
 import { IoLogoDribbble } from 'react-icons/io';
-import GrVirtualMachine from '../../assets/img/vbox__logo.svg';
+import GrVirtualMachine from '../../../assets/img/vbox__logo.svg';
+
 import {
   FaHtml5,
   FaSass,
@@ -34,6 +35,7 @@ import {
 function Cards() {
   const cards = [
     {
+      id: 1,
       title: 'Developer',
       icon: <CodeOutlinedIcon className='head__icon' />,
       subtitle:
@@ -57,6 +59,7 @@ function Cards() {
       ],
     },
     {
+      id: 2,
       title: 'Designer',
       icon: <RiPencilRuler2Line className='head__icon' />,
       subtitle: 'I value simple design, thoughtful and meaningful structure.',
@@ -77,6 +80,7 @@ function Cards() {
       ],
     },
     {
+      id: 3,
       title: 'DevOps',
       icon: <CloudDoneOutlinedIcon className='head__icon' />,
       subtitle:
@@ -112,7 +116,6 @@ function Cards() {
     <Container className='cards' style={{ display: 'flex' }}>
       {cards.map((card, index) => (
         <Card
-          key={index}
           title={card.title}
           icon={card.icon}
           subtitle={card.subtitle}

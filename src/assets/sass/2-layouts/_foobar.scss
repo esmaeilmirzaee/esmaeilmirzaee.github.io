@@ -1,6 +1,10 @@
+// favourite colour: #ff9d00
+
 @media screen and (max-width: 480px) {
   .footer {
-    background: #e0e0e0;
+    // e0e0e0
+    background: #fff9f2;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,7 +15,7 @@
 
 @media screen and (min-width: 480px) and (max-width: 960px) {
   .footer {
-    background: #e0e0e0;
+    background: #fff9f2;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,14 +26,16 @@
   .invisible__footer {
     display: none;
     visibility: hidden;
+    background-color: #fff9f2;
     color: #ff9d00;
   }
 }
 
 @media screen and (min-width: 960px) {
   .footer {
+    color: black;
     width: 100%;
-    background: #e0e0e0;
+    background: #fff9f2;
     display: flex;
     justify-content: center;
     align-items: center;

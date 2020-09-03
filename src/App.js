@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Route, Switch } from 'react-router-dom';
-import Appbar from './components/navbar/Appbar';
+import Appbar from './components/navbar/AppBarV2';
 import Foobar from './components/navbar/Foobar';
 import {
   createMuiTheme,
@@ -8,17 +8,15 @@ import {
   useMediaQuery,
 } from '@material-ui/core';
 import { Paper } from '@material-ui/core/';
-import Home from './components/pages/Home';
-import About from './components/pages/About';
 
-import Hero from './components/home_page_sections/Hero';
-import Objective from './components/home_page_sections/ObjectiveHero';
-import Cards from './components/experience_cards/Cards';
-import Projects from './components/recent_projects/Projects';
-import MidMainImage from './components/MidMainImage';
-import Contact from './components/contacts/Contact';
+import About from './components/pages/About';
+import LandingPage from './components/landing_page/LandingPage';
+import Posts from './components/blogs_post/Posts';
+import Post from './components/blogs_post/Post';
+import nf from './components/utilities/NotFound';
 
 function App() {
+  const [selectedTab, setSelectedTab] = useState(0);
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
   const themeMode = true;
   const theme = React.useMemo(
@@ -61,20 +59,24 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <Paper>
-        <Appbar />
+        <Appbar selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
         <div className='container'>
           <Switch>
+            <Route path='/404' component={nf} />
+            <Route path='/posts/:id' render={(props) => <Post {...props} />} />
+            <Route path='/posts' component={Posts} />
             <Route path='/about' render={(props) => <About {...props} />} />
-            <Route from='/' render={(props) => <Home {...props} />} />
+            <Route from='/' component={LandingPage} />
           </Switch>
-          <Hero />
-          <Objective />
-          <Cards />
-          {/* <MidMainImage style={{ width: '100vw', maxHeight: '400px' }} /> */}
-          {/* <Projects style={{ visibility: 'hidden' }} /> */}
-          <Contact />
         </div>
-        <Foobar background='main' />
+        <Foobar
+          style={{
+            display: 'flex',
+            position: 'relative',
+            bottom: '0',
+            left: '0',
+          }}
+        />
       </Paper>
     </ThemeProvider>
   );
