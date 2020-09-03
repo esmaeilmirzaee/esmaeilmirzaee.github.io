@@ -46,6 +46,7 @@ export default function AppBarV2(props) {
               component={Link}
               to='/'
               disableRipple
+              onClick={() => props.setSelectedTab(0)}
             >
               <img className='logo' src={logo} alt='' />
               <Typography className='logo__title' component='h6' variant='h5'>
