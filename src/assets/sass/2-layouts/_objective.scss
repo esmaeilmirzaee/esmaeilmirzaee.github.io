@@ -1,0 +1,33 @@
+@media screen and (max-width: 480px) {
+  .objective {
+    display: flex;
+    padding: 1em;
+    width: 90%;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid $primaryLight;
+    box-shadow: 10px 5px 0px 0px $primaryLight;
+  }
+
+  .objective__body {
+    padding: 10px;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .objective {
+    display: flex;
+    padding: 30px;
+    width: 95%;
+    background-color: #fff;
+    transform: translateX(10px) translateY(5px);
+    border-radius: 5px;
+    // z-index: -1000;
+    border: 1px solid $primaryLight;
+    box-shadow: 10px 5px 0px 0px $primaryLight;
+  }
+
+  .objective__body {
+    padding: 10px;
+  }
+}

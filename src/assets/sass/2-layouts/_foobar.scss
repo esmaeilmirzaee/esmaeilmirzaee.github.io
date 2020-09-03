@@ -1,0 +1,45 @@
+// favourite colour: #ff9d00
+
+@media screen and (max-width: 480px) {
+  .footer {
+    // e0e0e0
+    background: #fff9f2;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 960px) {
+  .footer {
+    background: #fff9f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+  }
+
+  .invisible__footer {
+    display: none;
+    visibility: hidden;
+    background-color: #fff9f2;
+    color: #ff9d00;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .footer {
+    color: black;
+    width: 100%;
+    background: #fff9f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+  }
+}
