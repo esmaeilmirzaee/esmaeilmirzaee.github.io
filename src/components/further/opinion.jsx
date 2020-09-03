@@ -1,25 +1,21 @@
 import React, { useState, useEffect } from 'react';
-import { Grid, Typography } from '@material-ui/core';
+import { Grid, Typography, Button } from '@material-ui/core';
 
-import VotingButton from '../styled_components/votingButton';
+import IconButton from '../styled_components/votingButton';
 
 class Opinion extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       count: 0,
     };
   }
 
   incrementCount = () => {
-    this.setState({
-      count: this.state.count + 1,
-    });
+    this.setState({ count: this.state.count + 1 });
   };
 
   render() {
-    let { count } = this.state;
-
     return (
       <Grid
         container
@@ -39,7 +35,7 @@ class Opinion extends React.Component {
               justifyContent: 'center',
             }}
           >
-            {count} response
+            {this.state.count} response
           </Typography>
         </Grid>
         <Grid container item>
@@ -55,42 +51,42 @@ class Opinion extends React.Component {
             }}
           >
             <Grid item xs={2}>
-              <VotingButton
+              <IconButton
                 icon='👍🏻'
                 title=' Upvote'
-                action={this.incrementCount}
+                onClick={this.incrementCount}
               />
             </Grid>
             <Grid item xs={2}>
-              <VotingButton
+              <IconButton
                 icon='🤪'
                 title=' Funny'
                 onClick={this.incrementCount}
               />
             </Grid>
             <Grid item xs={2}>
-              <VotingButton
+              <IconButton
                 icon='😍'
                 title=' Loved'
                 onClick={this.incrementCount}
               />
             </Grid>
             <Grid item xs={2}>
-              <VotingButton
+              <IconButton
                 icon='😲'
                 title=' Surprised'
                 onClick={this.incrementCount}
               />
             </Grid>
             <Grid item xs={2}>
-              <VotingButton
+              <IconButton
                 icon='😩'
                 title=' Sad'
                 onClick={this.incrementCount}
               />
             </Grid>
             <Grid item xs={2}>
-              <VotingButton
+              <IconButton
                 icon='😖'
                 title=' Angry'
                 onClick={this.incrementCount}
