@@ -31,7 +31,7 @@ const useStyle = makeStyles((theme) => ({
   },
 }));
 
-export default function AppBarV2() {
+export default function AppBarV2(props) {
   const classes = useStyle();
   const theme = useTheme();
   const viewPortSize = useMediaQuery(theme.breakpoints.down('md'));
@@ -54,7 +54,10 @@ export default function AppBarV2() {
             </Button>
 
             {/* FIXME: The name is inappropriate */}
-            <MenuNavbar />
+            <MenuNavbar
+              selectedTab={props.selectedTab}
+              setSelectedTab={props.setSelectedTab}
+            />
             {/* {viewPortSize ? <Drawer /> : <MenuNavbar />} */}
           </Toolbar>
         </AppBar>

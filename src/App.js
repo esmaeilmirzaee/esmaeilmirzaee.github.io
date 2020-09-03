@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Appbar from './components/navbar/AppBarV2';
 import Foobar from './components/navbar/Foobar';
@@ -8,7 +8,7 @@ import {
   useMediaQuery,
 } from '@material-ui/core';
 import { Paper } from '@material-ui/core/';
-import Home from './components/pages/Home';
+
 import About from './components/pages/About';
 import LandingPage from './components/landing_page/LandingPage';
 import Posts from './components/blogs_post/Posts';
@@ -16,6 +16,7 @@ import Post from './components/blogs_post/Post';
 import nf from './components/utilities/NotFound';
 
 function App() {
+  const [selectedTab, setSelectedTab] = useState(0);
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
   const themeMode = true;
   const theme = React.useMemo(
@@ -58,7 +59,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <Paper>
-        <Appbar />
+        <Appbar selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
         <div className='container'>
           <Switch>
             <Route path='/404' component={nf} />
