@@ -12,7 +12,8 @@ const useStyle = makeStyles((theme) => ({
   articleSection: {
     display: 'block-flex',
     textAlign: 'left',
-    width: '70%',
+    width: '60%',
+    justifyContent: 'center',
   },
   followButton: {
     cursor: 'pointer',
@@ -70,7 +71,7 @@ export default function Post(props) {
     return <Redirect to='/404' />;
   }
   return (
-    <Container className={classes.articleSection}>
+    <Container className={classes.articleSection} {...props.setSelectedTab(1)}>
       <Typography variant='h3'>{fetchedPost.title}</Typography>
       <div className={classes.infoSection}>
         <div className={classes.infoText}>
