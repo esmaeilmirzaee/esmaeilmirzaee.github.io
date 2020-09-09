@@ -17,7 +17,7 @@ const useStyle = makeStyles((theme) => ({
 export default function VotingButton(props) {
   const classes = useStyle();
   return (
-    <Button className={classes.votingButton}>
+    <Button className={classes.votingButton} onClick={props.onClick}>
       {props.icon ? props.icon : null} {props.title}
     </Button>
   );

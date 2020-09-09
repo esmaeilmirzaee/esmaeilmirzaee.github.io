@@ -63,7 +63,16 @@ function App() {
         <div className='container'>
           <Switch>
             <Route path='/404' component={nf} />
-            <Route path='/posts/:id' render={(props) => <Post {...props} />} />
+            <Route
+              path='/posts/:id'
+              render={(props) => (
+                <Post
+                  {...props}
+                  selectedTab={selectedTab}
+                  setSelectedTab={setSelectedTab}
+                />
+              )}
+            />
             <Route path='/posts' component={Posts} />
             <Route path='/about' render={(props) => <About {...props} />} />
             <Route from='/' component={LandingPage} />
