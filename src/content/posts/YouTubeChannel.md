@@ -1,7 +1,7 @@
 ---
 title: How to create a YouTube channel
 author: Esmaeil MIRZAEE
-date: Sep 29, 2020
+date: Aug 29, 2020
 readtime: 9
 image: 19.png
 point: Start your teaching in YouTube.

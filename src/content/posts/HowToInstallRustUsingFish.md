@@ -1,5 +1,5 @@
 ---
-title: How to install _Rust_ on _fish_
+title: How to install Rust on fish
 author: Esmaeil MIRZAEE
 date: Sep 9, 2020
 readtime: 2
