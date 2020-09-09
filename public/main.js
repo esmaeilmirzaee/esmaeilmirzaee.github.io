@@ -1,7 +1,7 @@
 const path = require('path');
 const fs = require('fs');
 
-const dirPathPosts = path.join(__dirname, '../src/content/posts');
+const dirPathPosts = path.join(__dirname, '../src/content/posts/');
 let postLists = [];
 
 // FIXME: files must be inside foldres unless an error occurs.
@@ -59,7 +59,7 @@ const getPosts = () => {
         if (postLists.length === files.length) {
           console.log('Generating files...');
           let data = JSON.stringify(postLists);
-          fs.writeFileSync('src/content/generated/posts.json', data);
+          fs.writeFileSync('../src/content/generated/posts.json', data);
         }
       });
     });

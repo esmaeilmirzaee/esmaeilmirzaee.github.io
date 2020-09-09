@@ -17,7 +17,7 @@ Fish or **friendly interactive shell** is another `Unix shell` environment that 
 
 ## What is Rust?
 
-`Rust` a blazingly fast programming language. It is a system programming language and statically typed which is supported by community and Mozilla. `Rust` is memory safe and not object oriented. It's more like [`ML`, `F#` and `haskel`](https://newrustacean.com/show_notes/e000/index.html).
+`Rust` a blazingly fast programming language. It is a system programming language and statically typed which is supported by community and Mozilla. `Rust` is memory safe and not object oriented. It's more like [`ML`, `F#` and `OCamel`](https://newrustacean.com/show_notes/e000/index.html).
 
 # How to install Rust?
 
