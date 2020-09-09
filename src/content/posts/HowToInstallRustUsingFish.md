@@ -7,7 +7,7 @@ image: 19.png
 point: Fish is an interactive shell environment. Installation of tools or programming languages on it is somehow tricky due to its way of working.
 ---
 
-> In this post, I explain the process of running the **lovely programming language** `Rust` on `Fish`.
+> In this post, I explain the process of running the **lovely programming language** `Rust` on `Fish`. To learn more about `Rust` please refer to [newrustacean](https://newrustacean.com/)---it's a great podcast to learn.
 
 # Introduction
 
